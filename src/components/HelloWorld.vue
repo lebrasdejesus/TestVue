@@ -46,6 +46,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #E54320;
+  color: #FF1EFF;
 }
 </style>
