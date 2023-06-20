@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="containerImage"></div>
+    <div></div>
     <div ><img class="logo" alt="Vue logo" src="../assets/logo.png"></div>
     <div></div>
     <div></div>
@@ -8,17 +8,14 @@
     <div></div>
     <div></div>
     <div></div>
-    <div></div>
+    <div><a href="./components/contenu1.vue" target="_blank" rel="noopener">Contenu</a></div>
     <div></div>
   </div>
-
-
 </template>
 
 <script>
 export default {
   name: 'NavB',
-
 }
 </script>
 
