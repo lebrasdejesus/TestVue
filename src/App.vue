@@ -1,34 +1,47 @@
 <template>
   <div>
-    <div class="navbar">
-      <navBar />
-    </div>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <contenu1/>
+    <navBar />
+    <component :is="currentView" />
   </div>
   <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
 </template>
 
 
-
 <script>
-import navBar from './components/navBar.vue'
-import contenu1 from './components/contenu1.vue'
+import navBar from './components/navBar.vue';
+import pageContenu1 from './pageContenu1.vue';
+import pageContenu2 from './pageContenu2.vue';
+import Home from './HomePage.vue';
+
 // import HelloWorld from './components/HelloWorld.vue'
 
-// export default {
-//   name: 'App',
-//   // components: {
-//   //   HelloWorld,
-//   // }
-// }
+const routes = {
+  '/': Home,
+  '/contenu1': pageContenu1,
+  '/contenu2': pageContenu2,
+}
 
 export default {
   name: 'App',
   components: {
     navBar,
-    contenu1,
+    pageContenu1,
+    pageContenu2,
+    Home,
   },
+  data() {
+    return {
+      currentPath: window.location.hash
+    }
+  },
+  computed: {
+    currentView() {
+      return routes[this.currentPath.slice(1) || '/'] || Home
+    }
+  },
+  mounted() {
+    window.addEventListener('hashchange', () => { this.currentPath = window.location.hash })
+  }
 };
 
 </script>
@@ -53,7 +66,8 @@ body {
   color: #2c3e50;
   /* margin-top: 60px; */
 }
-.navbar{
+
+.navbar {
   max-height: 8vh;
 }
 </style>

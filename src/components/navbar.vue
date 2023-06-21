@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div></div>
-    <div ><img class="logo" alt="Vue logo" src="../assets/logo.png"></div>
+    <div><a href="#/"><img class="logo" alt="Vue logo" src="../assets/logo.png"></a></div>
     <div></div>
     <div></div>
     <div></div>
+    <div><a href="#/contenu1">Contenu1</a></div>
+    <div><a href="#/contenu2">Contenu2</a></div>
     <div></div>
     <div></div>
-    <div></div>
-    <div><a href="./components/contenu1.vue" target="_blank" rel="noopener">Contenu</a></div>
     <div></div>
   </div>
 </template>
@@ -27,12 +27,11 @@ export default {
   background-color: white;
   display: grid;
   grid-template-columns: 0.5fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 0.5fr;
-  border: 2px solid red;
 }
 .container > div{
   padding: 0px 0px;
   background-color: #8be5bc;
-  border: 2px solid RGB(120,40,160);
+  border: 2px solid #2c3e50;
 }
 .logo{
   max-height: 7vh;
