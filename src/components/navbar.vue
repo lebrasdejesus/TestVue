@@ -5,10 +5,10 @@
     <div></div>
     <div></div>
     <div></div>
-    <div><a href="#/contenu1">Contenu1</a></div>
-    <div><a href="#/contenu2">Contenu2</a></div>
-    <div></div>
-    <div></div>
+    <div class="menu"><a href="#/contenu1">Contenu1</a></div>
+    <div class="menu"><a href="#/contenu2">Contenu2</a></div>
+    <div class="menu"><a href="#/contenu3">Contenu3</a></div>
+    <div class="menu"><a href="#/contenu4">Contenu4</a></div>
     <div></div>
   </div>
 </template>
@@ -35,6 +35,15 @@ export default {
 }
 .logo{
   max-height: 7vh;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
 

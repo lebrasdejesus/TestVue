@@ -14,7 +14,7 @@
             <exo2 @palindrome="getresult"/>
         </div>
         <div v-if="showExo === 3">
-            <exo3 />
+            <exo3 @periaire="getresult"/>
         </div>
 
         <div class="contourdegueu">

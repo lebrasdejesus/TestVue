@@ -11,6 +11,8 @@
 import navBar from './components/navBar.vue';
 import pageContenu1 from './pageContenu1.vue';
 import pageContenu2 from './pageContenu2.vue';
+import pageContenu3 from './pageContenu3.vue';
+import pageContenu4 from './pageContenu4.vue';
 import Home from './HomePage.vue';
 
 // import HelloWorld from './components/HelloWorld.vue'
@@ -19,6 +21,8 @@ const routes = {
   '/': Home,
   '/contenu1': pageContenu1,
   '/contenu2': pageContenu2,
+  '/contenu3': pageContenu3,
+  '/contenu4': pageContenu4,
 }
 
 export default {
@@ -27,6 +31,8 @@ export default {
     navBar,
     pageContenu1,
     pageContenu2,
+    pageContenu3,
+    pageContenu4,
     Home,
   },
   data() {
