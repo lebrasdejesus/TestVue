@@ -12,7 +12,7 @@
         <div>
             <input type="color" v-model="couleurfond" />
         </div>
-        <div>
+        <div class="margin">
             <label for="avatar">Choose a profile picture:</label>
             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
             <!-- https://medium.com/@renatello/how-to-upload-a-file-in-vue-js-895cdd3b35f8 -->
@@ -30,7 +30,7 @@ export default {
         return {
             taille: 100,
             couleurfond: "#ffff00",
-            pict:"",
+            pict: "",
         };
     },
 }
@@ -57,7 +57,14 @@ export default {
     margin-top: 20px;
     animation: translation 5s linear infinite;
     text-align: center;
+}
 
+.divselecteur {
+    margin-top: 20px;
+}
+
+.margin {
+    margin-top: 50px;
 }
 
 /* @keyframes translation {
@@ -74,9 +81,4 @@ export default {
     100% {
         transform: perspective(100px) translate3d(0px, 0px, 0px);
     }
-} */
-
-.divselecteur {
-    margin-top: 20px;
-}
-</style>
+} */</style>
