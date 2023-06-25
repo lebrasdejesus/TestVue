@@ -12,11 +12,21 @@
         <div>
             <input type="color" v-model="couleurfond" />
         </div>
+
+        <!-- https://medium.com/@renatello/how-to-upload-a-file-in-vue-js-895cdd3b35f8 -->
+        <!-- <div class="margin">
+            <button class="btn btn-info" @click="onPickFile">Télécharger une photo de profil</button>
+            <input type="file" style="display : none" ref="fileInput" accept="image/*" @change="onFilePicked" />
+        </div> -->
+
+        <!-- https://stackoverflow.com/questions/49106045/preview-an-image-before-it-is-uploaded-vuejs -->
         <div class="margin">
             <label for="avatar">Choose a profile picture:</label>
-            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-            <!-- https://medium.com/@renatello/how-to-upload-a-file-in-vue-js-895cdd3b35f8 -->
-            <button @click="afficherimg">Envoyer</button>
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" @change="previewFiles">
+            <!-- <button @click="afficherimg">Envoyer</button> -->
+        </div>
+        <div class="conteneur2">
+            <div><img v-if="url" :src="url"></div>
         </div>
 
     </div>
@@ -25,14 +35,22 @@
 <script>
 export default {
     name: 'contenu-4',
-
     data() {
         return {
             taille: 100,
             couleurfond: "#ffff00",
             pict: "",
+            imgsrc: "",
+            url: null,
         };
     },
+    methods: {
+        previewFiles(event) {
+            console.log(event.target.files);
+            this.pict = event.target.files[0];
+            this.url = URL.createObjectURL(this.pict);
+        },
+    }
 }
 </script>
 
@@ -48,6 +66,7 @@ export default {
     display: flex;
     align-items: center;
     height: 320px;
+    /* border: 1px solid blue; */
 }
 
 .carre {
@@ -71,14 +90,11 @@ export default {
     0% {
         transform: perspective(100px) translate3d(0px, 0px, 0px);
     }
-
-
     50% {
         transform: perspective(100px) translate3d(0px, 0px, 50px);
     }
-
-
     100% {
         transform: perspective(100px) translate3d(0px, 0px, 0px);
     }
-} */</style>
+} */
+</style>

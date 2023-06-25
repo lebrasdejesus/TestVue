@@ -13,6 +13,7 @@ import pageContenu1 from './pageContenu1.vue';
 import pageContenu2 from './pageContenu2.vue';
 import pageContenu3 from './pageContenu3.vue';
 import pageContenu4 from './pageContenu4.vue';
+import pageContenu5 from './pageContenu5.vue';
 import Home from './HomePage.vue';
 
 // import HelloWorld from './components/HelloWorld.vue'
@@ -23,6 +24,7 @@ const routes = {
   '/contenu2': pageContenu2,
   '/contenu3': pageContenu3,
   '/contenu4': pageContenu4,
+  '/contenu5': pageContenu5,
 }
 
 export default {
@@ -33,6 +35,7 @@ export default {
     pageContenu2,
     pageContenu3,
     pageContenu4,
+    pageContenu5,
     Home,
   },
   data() {
