@@ -67,8 +67,9 @@ export default {
 
 .contourdegueu {
     margin-top: 2rem;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     padding: 2rem;
-    background-color: #41B883;
+    /* background-color: #41B883; */
+    background-color: #8be5bc;
 }
 </style>

@@ -9,7 +9,6 @@
             <!-- {{ listemots }} -->
             <Contenu3 :tableaumots="listemots" @supp="deletemot"/>
         </div>
-
     </div>
 </template>
 

@@ -12,12 +12,6 @@ export default {
     props: {
         tableaumots: Array
     },
-    // data() {
-    //     return {
-    //         mot: "",
-    //         listemots: []
-    //     };
-    // },
     methods: {
         deletemot(mot) {
             this.$emit('supp', mot)

@@ -6,10 +6,38 @@
             </div>
         </div>
 
+        <!-- <div class="parent">
+                <div class="child1"></div>
+                <div class="child1 child2"></div>
+            </div> -->
+
+        <!-- <div class="imagePrez">
+                <img class="img1" src="../assets/img-contenu5/20210721-Underwater-Yelda-16-Modifier.jpg" alt="">
+            </div>
+            <div class="imagePrez absolute">
+                <p class="subtitle">Sous l'eau</p>
+            </div>
+            <div class="imagePrez">
+                <img class="img1" src="../assets/img-contenu5/20210721-Underwater-Yelda-90-Modifier.jpg" alt="">
+            </div>
+            <div class="imagePrez">
+                <img class="img1"
+                    src="../assets/img-contenu5/20220124-Workshop-Immersion-Alison-Bounce-Châteauroux-5-Modifier-JPG-WEB-1280-2.jpg"
+                    alt="">
+            </div>
+            <div class="imagePrez">
+                <img class="img1"
+                    src="../assets/img-contenu5/20220124-Workshop-Immersion-Alison-Bounce-Châteauroux-78-Modifier.jpg"
+                    alt="">
+            </div>
+            <div class="imagePrez"> <img class="img1" src="../assets/img-contenu5/casino.jpg" alt=""></div>
+            <div class="imagePrez"> <img class="img1" src="../assets/img-contenu5/firmament.jpg" alt=""></div>
+            <div class="imagePrez"> <img class="img1" src="../assets/img-contenu5/lin-long-2.jpg" alt=""></div>
+            <div class="imagePrez"> <img class="img1" src="../assets/img-contenu5/sortilege.jpg" alt=""></div> -->
         <div class="conteneur-album">
             <div class="album">
-                <!-- https://pavenum.com/blog/overlay-avec-hover-sur-une-image-en-html-css/ -->
-                <div class="overlay-image" @click="agrandir">
+
+                <div class="overlay-image">
                     <img class="image img1" src="../assets/img-contenu5/20210721-Underwater-Yelda-16-Modifier.jpg"
                         alt="sous l'eau" />
                     <div class="normal">
@@ -95,7 +123,9 @@
                         <div class="text">Maquillage 4</div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 </template>
@@ -103,11 +133,8 @@
 <script>
 export default {
     name: 'contenu-5',
-    methods: {
-        agrandir() {
-
-        }
-    },
+    // methods: {
+    // },
 }
 </script>
 
@@ -116,6 +143,9 @@ export default {
     margin: 0;
     padding: 0;
 }
+/* .global{
+    width: 100%;
+} */
 
 .largeur50 {
     width: 50%;
@@ -134,15 +164,17 @@ h1 {
     font-size: 2.5rem;
     /* line-height: 2.5rem; */
 }
-
-.conteneur-album {
+.conteneur-album{
     display: flex;
     justify-content: center;
     border: 1px solid rgb(130, 238, 152);
+    /* align-items: center; 
+    width: 100%; */
 }
-
 .album {
     border: 1px solid violet;
+    /* display: flex;
+    flex-wrap: wrap; */
     display: grid;
     grid-template-columns: repeat(auto-fill, 15rem);
     /* grid-template-rows: repeat(auto-fill, 1fr); */
@@ -152,14 +184,48 @@ h1 {
     width: 100vw;
 }
 
+/* .imagePrez {
+    border: 1px solid blue;
+    height: 30rem;
+    width: 15rem;
+    margin: 3rem;
+    overflow: hidden;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.imagePrez img:hover {
+    filter: brightness(30%);
+    -webkit-filter: brightness(30%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+} */
+
 .img1 {
     transform: translate(-190px, -160px);
 }
 
+/* .subtitle {
+    color: aquamarine;
+    font-size: 2rem;
+    z-index: 2;
+} */
+
+.absolute {
+    position: absolute;
+}
+
+/* .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 /* Conteneur principal */
 .overlay-image {
     position: relative;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     height: 30rem;
     /* width: 15rem; */
     /* margin: 1rem; */
@@ -171,6 +237,7 @@ h1 {
 /* Image originale */
 .overlay-image .image {
     display: block;
+    /* width: 100%; */
     height: auto;
 }
 
@@ -184,6 +251,10 @@ h1 {
     position: absolute;
     bottom: 0;
     margin: 1rem;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* width: 100%; */
 }
 
 /* Overlay */
@@ -230,4 +301,31 @@ h1 {
         width: 15rem;
     }
 }
-</style>
+
+/* .container {
+  width: 0;
+  animation: expandWidth 2s forwards;
+} */
+/* .parent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: blue;
+    border: 2px solid black;
+}
+.child1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background: rgb(206, 149, 149);
+}
+.child2 {
+    z-index: 1;
+    margin: 20px;
+    background: green;
+} */</style>
