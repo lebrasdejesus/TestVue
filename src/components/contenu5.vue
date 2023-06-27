@@ -9,7 +9,7 @@
         <div class="conteneur-album">
             <div class="album">
                 <!-- https://pavenum.com/blog/overlay-avec-hover-sur-une-image-en-html-css/ -->
-                <div class="overlay-image" @click="agrandir">
+                <!-- <div class="overlay-image" @click="agrandir">
                     <img class="image img1" src="../assets/img-contenu5/20210721-Underwater-Yelda-16-Modifier.jpg"
                         alt="sous l'eau" />
                     <div class="normal">
@@ -94,7 +94,19 @@
                         <div class="icone"><img src="../assets/img-contenu5/noun-arrow-blanc.png" alt="fleche"></div>
                         <div class="text">Maquillage 4</div>
                     </div>
+                </div> -->
+
+                <div class="overlay-image animation" v-for="(item, ke) in dataimg" :key="ke" @click="agrandir(item)">
+                    <img class="image img1 " :src="item.image" :alt="item.titre"  @load="genererNbAleatoire(ke)"/>
+                    <div class="normal">
+                        <div class="text"></div>
+                    </div>
+                    <div class="survol">
+                        <div class="icone"><img src="../assets/img-contenu5/noun-arrow-blanc.png" alt="fleche"></div>
+                        <div class="text">{{ item.titre }}</div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -103,10 +115,32 @@
 <script>
 export default {
     name: 'contenu-5',
-    methods: {
-        agrandir() {
-
+    data() {
+        return {
+            dataimg: [
+                { image: "img-contenu5/20210721-Underwater-Yelda-16-Modifier.jpg", titre: "Sous l'eau 1" },
+                { image: "img-contenu5/20210721-Underwater-Yelda-90-Modifier.jpg", titre: "Sous l'eau 2" },
+                { image: "img-contenu5/20220124-Workshop-Immersion-Alison-Bounce-Châteauroux-5-Modifier-JPG-WEB-1280-2.jpg", titre: "Sous l'eau 3" },
+                { image: "img-contenu5/20220124-Workshop-Immersion-Alison-Bounce-Châteauroux-78-Modifier.jpg", titre: "Sous l'eau 4" },
+                { image: "img-contenu5/casino.jpg", titre: "Maquillage 1" },
+                { image: "img-contenu5/firmament.jpg", titre: "Maquillage 2" },
+                { image: "img-contenu5/lin-long-2.jpg", titre: "Maquillage 3" },
+                { image: "img-contenu5/sortilege.jpg", titre: "Maquillage 4" }
+            ],
         }
+    },
+    methods: {
+        agrandir(imag) {
+            // console.log(imag)
+            this.$emit('showimage', imag)
+        },
+        genererNbAleatoire(index) {
+            const imgElement = document.querySelectorAll('.animation' )[index]
+            const randomDelay = Math.floor(Math.random() * (5000 - 500 + 1) + 500);
+            console.log(randomDelay)
+            imgElement.style.animationDuration = `${randomDelay}ms`
+            // this.randomNumber = Math.random() * 100;
+        },
     },
 }
 </script>
@@ -149,7 +183,9 @@ h1 {
     gap: 3rem;
     padding: 3rem;
     /* margin: 2rem; */
-    width: 100vw;
+    width: 100%;
+    /* justify-items: center; */
+    justify-content: center;
 }
 
 .img1 {
@@ -164,10 +200,14 @@ h1 {
     /* width: 15rem; */
     /* margin: 1rem; */
     overflow: hidden;
-    width: 0;
-    animation: expandWidth 3s forwards;
-}
+    /* animation: expandWidth 3s forwards; */
 
+}
+.animation{
+    animation-name: expandWidth;
+    animation-timing-function: forwards;
+    animation-duration: 3s;
+}
 /* Image originale */
 .overlay-image .image {
     display: block;

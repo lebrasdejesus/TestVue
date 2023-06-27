@@ -1,7 +1,7 @@
 <template>
     <div>
-        <Contenu5 />
-        <Contenu5agrandir />
+        <Contenu5 @showimage="getimage"/>
+        <Contenu5agrandir :class="showbigimage ? 'show' : 'hidden' " @close="showbigimage=false" :imgaffichee="imageactuelle"/>
     </div>
 </template>
 
@@ -16,13 +16,25 @@ export default {
     },
     data() {
         return {
-
+            showbigimage: false,
+            imageactuelle: null,
         };
     },
     methods: {
-
+        getimage(donneesemit) {
+            console.log(donneesemit)
+            this.imageactuelle = donneesemit
+            this.showbigimage = true;
+        }
     }
 }
 </script>
 
-<style></style>
+<style>
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+</style>
