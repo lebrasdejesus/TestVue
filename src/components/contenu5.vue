@@ -201,7 +201,6 @@ h1 {
     /* margin: 1rem; */
     overflow: hidden;
     /* animation: expandWidth 3s forwards; */
-
 }
 .animation{
     animation-name: expandWidth;
@@ -251,7 +250,7 @@ h1 {
 
 .overlay-image .survol {
     background-color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
+    cursor: url(../assets/curseur-vert-20.png), auto;
 }
 
 .icone {
