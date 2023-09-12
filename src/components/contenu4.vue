@@ -1,10 +1,13 @@
 <template>
   <div class="conteneur">
-    <div class="conteneur2">
-      <div
-        class="carre"
-        :style="`width:${taille}px; height:${taille}px; background-color:${couleurfond}`"
-      ></div>
+    <div>
+      <h2>Color picker avec taille modifiable</h2>
+      <div class="conteneur2">
+        <div
+          class="carre"
+          :style="`width:${taille}px; height:${taille}px; background-color:${couleurfond}`"
+        ></div>
+      </div>
     </div>
 
     <div class="divselecteur">
@@ -23,7 +26,7 @@
 
     <!-- https://stackoverflow.com/questions/49106045/preview-an-image-before-it-is-uploaded-vuejs -->
     <div class="margin">
-      <label for="avatar">Ajoutez une image en jpg ou png :</label>
+      <h2>Ajouter une image à la page</h2>
       <input
         type="file"
         id="avatar"
@@ -31,7 +34,6 @@
         accept="image/png, image/jpeg"
         @change="previewFiles"
       />
-      <!-- <button @click="afficherimg">Envoyer</button> -->
     </div>
     <div>
       <div><img class="conteneur3" v-if="url" :src="url" /></div>
@@ -45,7 +47,7 @@ export default {
   data() {
     return {
       taille: 100,
-      couleurfond: "#ffff00",
+      couleurfond: "#34495E",
       pict: "",
       imgsrc: "",
       url: null,
@@ -71,41 +73,25 @@ export default {
 
 .conteneur2 {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 320px;
-  /* border: 1px solid blue; */
 }
 .conteneur3 {
   max-height: 70vh;
   max-width: 70vw;
-  /* border: 1px solid blue; */
+  margin-top: 20px;
 }
 .carre {
-  /* height: 300px;
-      width: 300px; */
   background-color: rgb(137, 137, 194);
-  margin-top: 20px;
   animation: translation 5s linear infinite;
-  text-align: center;
 }
 
 .divselecteur {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .margin {
-  margin-top: 50px;
+  margin-top: 30px;
 }
-
-/* @keyframes translation {
-      0% {
-          transform: perspective(100px) translate3d(0px, 0px, 0px);
-      }
-      50% {
-          transform: perspective(100px) translate3d(0px, 0px, 50px);
-      }
-      100% {
-          transform: perspective(100px) translate3d(0px, 0px, 0px);
-      }
-  } */
 </style>

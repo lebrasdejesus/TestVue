@@ -2,10 +2,9 @@
   <div class="global">
     <div class="title">
       <div class="largeur50">
-        <h1>
-          texte fictif de titre un peu long pour faire du contenu alors qu'on a
-          absoluement rien à dire
-        </h1>
+        <h2>
+          Reproduction d'une galerie photo <br />vue sur le site Dribbble.com
+        </h2>
       </div>
     </div>
 
@@ -136,25 +135,28 @@ export default {
     return {
       dataimg: [
         {
-          image: "img-contenu5/20210721-Underwater-Yelda-16-Modifier.jpg",
-          titre: "Sous l'eau 1",
+          image: "img-contenu5/beetle-macro.webp",
+          titre: "Nature1",
         },
         {
-          image: "img-contenu5/20210721-Underwater-Yelda-90-Modifier.jpg",
-          titre: "Sous l'eau 2",
+          image: "img-contenu5/jellyfish-underwater-cnidaria.webp",
+          titre: "Nature2",
         },
         {
-          image: "img-contenu5/20220124-Workshop-Immersion-Alison1.jpg",
-          titre: "Sous l'eau 3",
+          image: "img-contenu5/bunny-grass.webp",
+          titre: "Nature3",
         },
         {
-          image: "img-contenu5/20220124-Workshop-Immersion-Alison2.jpg",
-          titre: "Sous l'eau 4",
+          image: "img-contenu5/chile-lama-grassland.webp",
+          titre: "Nature4",
         },
-        { image: "img-contenu5/casino.jpg", titre: "Maquillage 1" },
-        { image: "img-contenu5/firmament.jpg", titre: "Maquillage 2" },
-        { image: "img-contenu5/lin-long-2.jpg", titre: "Maquillage 3" },
-        { image: "img-contenu5/sortilege.jpg", titre: "Maquillage 4" },
+        { image: "img-contenu5/oak-branch-green.webp", titre: "Nature5" },
+        { image: "img-contenu5/nymphaea-pink-dark.webp", titre: "Nature6" },
+        { image: "img-contenu5/aerial-forest-lake.webp", titre: "Nature7" },
+        {
+          image: "img-contenu5/long-exposure-sky-forest.webp",
+          titre: "Nature8",
+        },
       ],
     };
   },
