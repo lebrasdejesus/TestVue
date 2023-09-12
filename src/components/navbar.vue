@@ -1,7 +1,11 @@
 <template>
   <div class="containerNavbar">
     <div></div>
-    <div><a href="#/"><img class="logo" alt="Vue logo" src="../assets/logo.png"></a></div>
+    <div>
+      <a href="#/"
+        ><img class="logo" alt="Vue logo" src="../assets/logo.png"
+      /></a>
+    </div>
     <div></div>
     <div></div>
     <div class="menu"><a href="#/contenu1">Contenu1</a></div>
@@ -15,8 +19,8 @@
 
 <script>
 export default {
-  name: 'NavB',
-}
+  name: "NavB",
+};
 </script>
 
 <style>
@@ -29,10 +33,9 @@ export default {
   grid-template-columns: 0.5fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 0.5fr;
 }
 
-.containerNavbar>div {
+.containerNavbar > div {
   padding: 0px 0px;
   background-color: #8be5bc;
-  /* border: 2px solid #2c3e50; */
 }
 
 .logo {

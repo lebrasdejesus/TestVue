@@ -192,10 +192,9 @@ export default {
 }
 
 h1 {
-  color: rgb(83, 83, 126);
+  color: #34495e;
   font-family: "Times New Roman", Times, serif;
   font-size: 2.5rem;
-  /* line-height: 2.5rem; */
 }
 
 .conteneur-album {
