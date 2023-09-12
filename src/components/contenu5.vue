@@ -144,13 +144,11 @@ export default {
           titre: "Sous l'eau 2",
         },
         {
-          image:
-            "img-contenu5/20220124-Workshop-Immersion-Alison-Bounce-Châteauroux-5-Modifier-JPG-WEB-1280-2.jpg",
+          image: "img-contenu5/20220124-Workshop-Immersion-Alison1.jpg",
           titre: "Sous l'eau 3",
         },
         {
-          image:
-            "img-contenu5/20220124-Workshop-Immersion-Alison-Bounce-Châteauroux-78-Modifier.jpg",
+          image: "img-contenu5/20220124-Workshop-Immersion-Alison2.jpg",
           titre: "Sous l'eau 4",
         },
         { image: "img-contenu5/casino.jpg", titre: "Maquillage 1" },
